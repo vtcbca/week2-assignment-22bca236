@@ -40,3 +40,9 @@ stud_details(id,city,mobileno) (Use I'd as foreign key)
 	104|Bardoli|8989898989
 	109|Bardoli|9977665577
 
+5. Update mobileno who are comming from 'Surat'
+-->
+	update course
+	set mo_no=9090909090
+	where id=101 AND city='surat';
+
