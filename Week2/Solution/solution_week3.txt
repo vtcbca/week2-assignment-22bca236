@@ -32,10 +32,11 @@ Peform Following Operation.
  	   	dept=input("Enter emp dept:")
   	  	basic=int(input("Enter emp basic salary:"))
    		 branch=input("Enter emp branch:")
+  l.append(t)
 		cur=con.cursor()
 		cur.execute(q)
 		cur.execute(q1)
-	cur.execute(q3)
+	cur.execute(q3,l)
 	con.commit()
 	con.close()
 
@@ -69,6 +70,7 @@ con=sqlite3.connect("EMS.db")
 q="select * from employee where dept in('HR','IT')"
 cur=con.cursor()
 cur.execute(q)
+r=cur.fetchall()
 con.commit()
 con.close()
 
@@ -80,6 +82,7 @@ con.close()
 	q="select * from employee order by dept"
 	cur=con.cursor()
 	cur.execute(q)
+r=cur.fechall()
 	con.commit()
 	con.close()
 	
@@ -90,6 +93,7 @@ con.close()
 	q="select * from employee where basic>6000"
 	cur=con.cursor()
 	cur.execute(q)
+r=cur.fetchall()
 	con.commit()
 	con.close()
 
@@ -102,6 +106,7 @@ con.close()
 	q="select * from employee where  ename like '_r%'"
 	cur=con.cursor()
 	cur.execute(q)
+r=cur.fetchall()
 	con.commit()
 	con.close()
 	
@@ -112,6 +117,7 @@ con.close()
 	q="select * from employee where dept in('account','inventory')group by dept"
 	cur=con.cursor()
 	cur.execute(q)
+r=cur.fetchall()
 	con.commit()
 	con.close()
 
@@ -123,5 +129,6 @@ con.close()
 	q="select * from employee order by dept desc"
 	cur=con.cursor()
 	cur.execute(q)
+r=cur.fetchall()
 	con.commit()
 	con.close()
