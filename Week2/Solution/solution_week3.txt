@@ -22,8 +22,8 @@ Peform Following Operation.
 -->
 	import sqlite3
 	con=sqlite3.connect("EMS.db")
-	q="insert into employee values(1,'om','HR',9000,'surat'),(2,'sai','Account',10000,'Bardoli'),(3,'ram','IT',22000,'surat'),(4,'radha','Finince',11000,'vyara'),	(5,'krishna','HR',10000,'Digas')"
-	q1=[(6,'isha','account',8000,'orna'),(7,'hetvi','HR',9000,'surat'),(8,'vidhi','Management',8000,'vihan'),(9,'mahek','HR',7000,'Bardoli'),(10,'aastha','accountant',11000,'surat')]
+	q="insert into employee values(1,'om','HR',9000,'surat'),(2,'sai','Account',10000,'Bardoli'),(3,'ram','IT',22000,'surat'),(4,'radha','HR',11000,'vyara'),	(5,'krishna','HR',10000,'Digas')"
+	q1=[(6,'isha','account',8000,'orna'),(7,'hetvi','HR',9000,'surat'),(8,'vidhi','inventory',8000,'vihan'),(9,'mahek','HR',7000,'Bardoli'),(10,'aastha','accountant',11000,'surat')]
 	q3="insert into employee values(?,?,?,?,?)"
 	l=[]
 	for i in range(5):
